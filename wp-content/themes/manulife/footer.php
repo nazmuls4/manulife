@@ -40,7 +40,7 @@
 					</div>
 					<div class="opening-our d-flex align-items-start">
 						<div class="open-clock">
-							<img src="" alt="">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/cclock.png" alt="">
 						</div>
 						<div class="opening-time-detail">
 							<h4>Opening Hours</h4>
