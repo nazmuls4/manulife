@@ -136,6 +136,17 @@ function manulife_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Sidebar', 'manulife' ),
+			'id'            => 'footer-sidebar',
+			'description'   => esc_html__( 'Add Footer widgets here.', 'manulife' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s col-lg-3"><div class="footer-widget">',
+			'after_widget'  => '</div></div>',
+			'before_title'  => '<h3 class="footer-title mb-40">',
+			'after_title'   => '</h3>',
+		)
+	);
 }
 add_action( 'widgets_init', 'manulife_widgets_init' );
 

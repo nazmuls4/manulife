@@ -23,37 +23,47 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'manulife' ); ?></a>
+	 
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$manulife_description = get_bloginfo( 'description', 'display' );
-			if ( $manulife_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $manulife_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+	 <!--start navigation area-->
+    <header class="header_area" id="header_area">
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-xl navbar-light" data-spy="affix">
+                <div class="container-fluid">
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'manulife' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+                    <!-- Brand and toggle get grouped for better mobile display -->  
+                    
+                     <a class="navbar-brand logo_h" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $upload_logo_array[0]); ?>" alt="Site Logo"></a>   
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <?php 
+                           
+
+
+                            wp_nav_menu( array(
+							    'theme_location'  => 'menu-1',
+							    'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
+							    'container'       => 'ul',
+							    'container_class' => 'collapse navbar-collapse',
+							    'container_id'    => 'bs-example-navbar-collapse-1',
+							    'menu_class'      => 'nav navbar-nav menu_nav ml-auto',
+							    'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+							    'walker'          => new WP_Bootstrap_Navwalker(),
+							) );
+                        ?>
+
+
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--end navigation area-->
