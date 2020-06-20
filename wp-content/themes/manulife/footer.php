@@ -21,7 +21,9 @@
 						 <a class="navbar-brand logo_h" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Site Logo"></a>  
 					</div>
 				</div> 
+				<div class="col-lg-5">
 				 <?php echo do_shortcode( '[contact-form-7 id="15" title="Footer subscriber"]' ); ?>
+				</div>
 			</div>
 		</div>
 	</div>

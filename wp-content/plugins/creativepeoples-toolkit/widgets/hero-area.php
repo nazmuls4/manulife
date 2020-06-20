@@ -84,47 +84,27 @@ class Hero_Area_Widget extends \Elementor\Widget_Base {
 
 
 		$this->add_control(
-			'hero_title_1',
+			'hero_title',
 			[
-				'label' => __( 'Hero Title 1', 'plugin-name' ),
-				'type' => \Elementor\Controls_Manager::TEXTAREA,
-				'default' => 'A GOOD CHANGE ONLY',
+				'label' => __( 'Hero Title', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::WYSIWYG,
+				'default' => 'Do you want to know the secret to a better tomorrow?',
 				'label_block' => true, 
 			]
 		);
 
 		$this->add_control(
-			'hero_title_2',
+			'hero_area_content',
 			[
-				'label' => __( 'Hero Title 2', 'plugin-name' ),
-				'type' => \Elementor\Controls_Manager::TEXTAREA,
-				'default' => 'TAKES 3 MINUTES',
+				'label' => __( 'Hero content', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::WYSIWYG,
+				'default' => 'We are here to help you navigate all the moving parts of your financial life from financial planning to helping you invest wisely for the future. We do this by first assessing your short and long-term goals before creating a financial plan uniquely tailored to your needs. Let us help you realize your financial dreams.',
 				'label_block' => true, 
 			]
 		);
+		
 		$this->add_control(
-			'hero_title_3',
-			[
-				'label' => __( 'Hero Title 3', 'plugin-name' ),
-				'type' => \Elementor\Controls_Manager::TEXTAREA,
-				'default' => 'PLEASE SELECT AN OPTION',
-				'label_block' => true, 
-			]
-		);
-
-		 
-
-		$this->add_control(
-			'hero_background',
-			[
-				'label' => __( 'Hero area background', 'plugin-name' ),
-				'type' => \Elementor\Controls_Manager::MEDIA,
-				'label_block' => true,
-			]
-		);
-
-		$this->add_control(
-			'hero_thumbnail',
+			'hero_area_thumbnail',
 			[
 				'label' => __( 'Hero area thumbnail', 'plugin-name' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
@@ -133,11 +113,26 @@ class Hero_Area_Widget extends \Elementor\Widget_Base {
 		);
 
 		$this->add_control(
-			'hero_footer_thumb',
+			'btn_lebel',
 			[
-				'label' => __( 'Hero area footer thumbnail', 'plugin-name' ),
-				'type' => \Elementor\Controls_Manager::MEDIA,
-				'label_block' => true,
+				'label' => __( 'Btn lebel', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => 'CLICK HERE',
+				'label_block' => true, 
+			]
+		);
+		$this->add_control(
+			'btn_links',
+			[
+				'label' => __( 'Btn Link', 'plugin-domain' ),
+				'type' => \Elementor\Controls_Manager::URL,
+				'placeholder' => __( 'https://your-link.com', 'plugin-domain' ),
+				'show_external' => true,
+				'default' => [
+					'url' => '',
+					'is_external' => true,
+					'nofollow' => true,
+				],
 			]
 		);
  
@@ -159,34 +154,36 @@ class Hero_Area_Widget extends \Elementor\Widget_Base {
 
 		$settings = $this->get_settings_for_display();
 
-		 $hero_title_1 = $this->get_settings('hero_title_1'); 
-		 $hero_title_2 = $this->get_settings('hero_title_2'); 
-		 $hero_title_3 = $this->get_settings('hero_title_3'); 
-		 $hero_background = $this->get_settings('hero_background'); 
-		 $hero_thumbnail = $this->get_settings('hero_thumbnail'); 
-		 $hero_footer_thumb = $this->get_settings('hero_footer_thumb'); 
+		 $hero_title = $this->get_settings('hero_title');  
+		 $hero_area_content = $this->get_settings('hero_area_content');  
+		 $hero_area_thumbnail = $this->get_settings('hero_area_thumbnail');  
+		 $btn_lebel = $this->get_settings('btn_lebel');  
+		 $btn_links = $this->get_settings('btn_links');   
+		 $target = $settings['btn_links']['is_external'] ? ' target="_blank"' : '';
+		$nofollow = $settings['btn_links']['nofollow'] ? ' rel="nofollow"' : '';
 		
-
 
 ?>
 	
-<section class="hero-area position-relative d-flex align-items-center" data-background="<?php echo $hero_background['url']; ?>">
+<section class="hero-area position-relative d-flex align-items-center">
+
 	  <div class="container">
-	  	<div class="row">
-	  		<div class="col-lg-12 text-center">
-	  			<div class="hero-area-inner-content">
-	  				<h4 class="text-uppercase mb-30">A good change only</h4>
-					<h1 class="text-uppercase mb-30">Takes 3 minutes</h1>
-					<h2 class="text-uppercase">Please select an option</h2>
-					<div class="hero-area-thumbnail">
-						<img src="<?php echo $hero_thumbnail['url']; ?>" alt="">
-					</div>
+	  	<div class="row align-items-center">
+	  		<div class="col-lg-8">
+	  			<div class="hero-area-title">
+	  				<?php echo $hero_title; ?>
+	  			</div>
+	  			<div class="hero-area-description text-center">
+	  				<?php echo $hero_area_content; ?>
+	  			</div>
+	  			<div class="site-btn hero-btn text-center">
+	  				<a <?php echo $target ?> <?php echo $nofollow ?> href="<?php echo $btn_links['url'] ?>" class="primary-btn filled-btn text-uppercase"> <span><?php echo $btn_lebel ?> </span>TO FIND OUT HOW</a>
 	  			</div>
 	  		</div>
 	  	</div>
 	  </div>
-	  <div class="hero-area-shape">
-	  	<img src="<?php echo $hero_footer_thumb['url']; ?>" alt="">
+	  <div class="hero-area-thumbnail">
+	  	<img src="<?php echo $hero_area_thumbnail['url']; ?>" alt="">
 	  </div>
 </section>
 <?php
