@@ -46,11 +46,13 @@ while ( have_posts() ) :
 
 <?php if ($enable_breadcum == true): ?>
 <div class="breadcumarea position-relative">
+
 	<?php if (has_post_thumbnail(  )): ?>
 		<div class="breadcum-feature-image">
 			<img src="<?php echo the_post_thumbnail_url() ; ?>" alt="breadcum iamge"> 
 		</div>
 	<?php endif; ?>
+	
 	<div class="cotainer-fulid">
 		<div class="container">
 			<div class="row justify-content-lg-end">

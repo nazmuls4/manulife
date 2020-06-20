@@ -274,6 +274,7 @@ function add_elementor_widget_categories( $elements_manager ) {
 }
 add_action( 'elementor/elements/categories_registered', 'add_elementor_widget_categories' );
 
+require(__DIR__ . '/widgets/recent-post-custom-widget.php');
 
 /**
  * Code start framework
