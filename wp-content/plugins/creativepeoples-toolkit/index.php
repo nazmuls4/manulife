@@ -241,6 +241,7 @@ final class Cp_Toolkit_Extenstion {
 		require_once( __DIR__ . '/widgets/Investment-Philosophy.php');  
 		require_once( __DIR__ . '/widgets/how-much.php');  
 		require_once( __DIR__ . '/widgets/value-permission.php');  
+		require_once( __DIR__ . '/widgets/decade-service.php');  
 
 		// Register widget
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Hero_Area_Widget() );  
@@ -248,6 +249,7 @@ final class Cp_Toolkit_Extenstion {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Investment_Philosophy_Section_Widget() );  
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \how_much_Section_Widget() );  
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \value_permission_Section_Widget() );  
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \decare_service_Section_Widget() );  
 
 	}
 

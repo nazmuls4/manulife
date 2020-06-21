@@ -6,7 +6,7 @@
  *
  * @since 1.0.0
  */
-class value_permission_Section_Widget extends \Elementor\Widget_Base {
+class decare_service_Section_Widget extends \Elementor\Widget_Base {
 
 	/**
 	 * Get widget name.
@@ -19,7 +19,7 @@ class value_permission_Section_Widget extends \Elementor\Widget_Base {
 	 * @return string Widget name.
 	 */
 	public function get_name() {
-		return 'value-permission';
+		return 'decare-service';
 	}
 
 	/**
@@ -125,7 +125,7 @@ class value_permission_Section_Widget extends \Elementor\Widget_Base {
 			'list_title', [
 				'label' => __( 'Title', 'plugin-domain' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
-				'default' => __( 'A True Partnership' , 'plugin-domain' ),
+				'default' => __( 'Short-Term & Medium-Term Goals' , 'plugin-domain' ),
 				'label_block' => true,
 			]
 		);
@@ -134,7 +134,7 @@ class value_permission_Section_Widget extends \Elementor\Widget_Base {
 			'list_content', [
 				'label' => __( 'Content', 'plugin-domain' ),
 				'type' => \Elementor\Controls_Manager::WYSIWYG,
-				'default' => __( 'We don’t sell you financial products, instead we partner with you in order to figure out the financial solution that works best for you. We also have partnerships and affiliations with accountants, lawyers and tax specialists who can aid us in providing you with an integrated financial approach.' , 'plugin-domain' ),
+				'default' => __( 'This is where we look for solutions on how to improve your current financial life. This includes debt reduction, tax reduction, purchasing a home, family related expenses, starting a...' , 'plugin-domain' ),
 				'label_block' => true,
 			]
 		); 
