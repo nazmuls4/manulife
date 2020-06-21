@@ -33,7 +33,7 @@ class decare_service_Section_Widget extends \Elementor\Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return __( 'Value Permission', 'plugin-name' );
+		return __( 'Decare service', 'plugin-name' );
 	}
 
 	/**
@@ -88,7 +88,7 @@ class decare_service_Section_Widget extends \Elementor\Widget_Base {
 				'label' => __( 'Section Big Title', 'plugin-name' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'label_block' => true,
-				'default' => 'Our Value Proposition',
+				'default' => 'Decades of Service',
 			]
 		);
         
@@ -98,17 +98,25 @@ class decare_service_Section_Widget extends \Elementor\Widget_Base {
 				'label' => __( 'Section Small Title', 'plugin-name' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'label_block' => true,
-				'default' => 'PROCESS',
+				'default' => 'FROM OUR CLIENTS',
 			]
 		); 
+
+		$this->add_control(
+			'section_bg', [
+				'label' => __( 'Secction background', 'plugin-domain' ),
+				'type' => \Elementor\Controls_Manager::MEDIA, 
+				'label_block' => true,
+			]
+		);
 
 		$this->end_controls_section();
 
 		// service list
 		$this->start_controls_section(
-			'servicce_list',
+			'decare_servicce',
 			[
-				'label' => __( 'Value permission list', 'plugin-name' ),
+				'label' => __( 'Decare service list', 'plugin-name' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -122,19 +130,27 @@ class decare_service_Section_Widget extends \Elementor\Widget_Base {
 			]
 		);
 		$repeater->add_control(
-			'list_title', [
-				'label' => __( 'Title', 'plugin-domain' ),
+			'decre_Service_name', [
+				'label' => __( 'Service name', 'plugin-domain' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
-				'default' => __( 'Short-Term & Medium-Term Goals' , 'plugin-domain' ),
+				'default' => __( 'Marty Shwartz' , 'plugin-domain' ),
 				'label_block' => true,
 			]
 		);
 
 		$repeater->add_control(
-			'list_content', [
-				'label' => __( 'Content', 'plugin-domain' ),
+			'decare_service_designation', [
+				'label' => __( 'Decare service designation', 'plugin-domain' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => __( 'Founder, Lemonade co.' , 'plugin-domain' ),
+				'label_block' => true,
+			]
+		); 
+		$repeater->add_control(
+			'decare_service_description', [
+				'label' => __( 'Decare service designation', 'plugin-domain' ),
 				'type' => \Elementor\Controls_Manager::WYSIWYG,
-				'default' => __( 'This is where we look for solutions on how to improve your current financial life. This includes debt reduction, tax reduction, purchasing a home, family related expenses, starting a...' , 'plugin-domain' ),
+				'default' => __( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat in out team & plus.' , 'plugin-domain' ),
 				'label_block' => true,
 			]
 		); 
@@ -142,10 +158,10 @@ class decare_service_Section_Widget extends \Elementor\Widget_Base {
 		$this->add_control(
 			'list',
 			[
-				'label' => __( 'Service List', 'plugin-domain' ),
+				'label' => __( 'Decare service List', 'plugin-domain' ),
 				'type' => \Elementor\Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(), 
-				'title_field' => '{{{ list_title }}}',
+				'title_field' => '{{{ decre_Service_name }}}',
 			]
 		);
 		$this->end_controls_section();
@@ -162,14 +178,15 @@ class decare_service_Section_Widget extends \Elementor\Widget_Base {
 	 */
 	protected function render() {
 
-		$settings = $this->get_settings_for_display();
-
+		$settings = $this->get_settings_for_display(); 
 		$section_big_title = $this->get_settings('section_big_title');    
 		$section_small_title = $this->get_settings('section_small_title');    
+		$section_bg = $this->get_settings('section_bg');    
 		$list = $this->get_settings('list');    
 ?>
 	
-	<section class="brands-area value-permission-area position-relative pt-100 pb-70">
+	<section class="decare-service-area position-relative pt-100 pb-70" data-background="<?php echo $section_bg['url'] ?>"> 
+		<div class="decare-service-area-overlay"></div> 
         <div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -180,25 +197,28 @@ class decare_service_Section_Widget extends \Elementor\Widget_Base {
 				</div>
 			</div>
 			<div class="row">
+ 				<div class="col-lg-12">
+ 					<div class="decare-servicelist-wrapper">
 
-				<?php foreach ($list as $key => $listitems): 
-					 
-				?> 
-				<div class="col-lg-4">
-					<div class="our-single-service-list value-permission-list text-center position-relative">
-						<div class="service-icon">
-							<img src="<?php echo $listitems['list_thumbnail']['url']; ?>" alt="">
-						</div>
-						<div class="service-desc-title">
-							<h3><?php echo $listitems['list_title']; ?></h3>
-						</div>
-						<div class="service-desc-short">
-							<?php echo $listitems['list_content']; ?>
-						</div> 
-					</div>
-				</div>
-				<?php endforeach ;?>
+ 						<?php foreach ($list as $key => $listitems): ?>
+ 							<div class="single-decare-service"> 
+ 							<div class="singledecore-service-meta d-flex align-items-start">
+ 								<div class="single-decre-service-img">
+ 									<img src="<?php echo $listitems['list_thumbnail']['url'] ?>" alt="">
+ 								</div>
+ 								<div class="decare-service-meta-content">
+ 									<h3><?php echo $listitems['decre_Service_name'] ?></h3>
+ 									<p><?php echo $listitems['decare_service_designation'] ?></p>
+ 								</div>
+ 							</div>
+ 							<div class="single-decare-service-content">
+ 								<?php echo $listitems['decare_service_description'] ?>
+ 							</div> 
+ 						</div>
+ 						<?php endforeach ;?>
 
+ 					</div>
+ 				</div> 
 			</div>
 
 		</div>

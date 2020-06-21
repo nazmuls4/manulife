@@ -26,27 +26,27 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Generic
-	- Normalize
-	- Box sizing
+    - Normalize
+    - Box sizing
 # Base
-	- Typography
-	- Elements
-	- Links
-	- Forms
+    - Typography
+    - Elements
+    - Links
+    - Forms
 ## Layouts
 # Components
-	- Navigation
-	- Posts and pages
-	- Comments
-	- Widgets
-	- Media
-	- Captions
-	- Galleries
+    - Navigation
+    - Posts and pages
+    - Comments
+    - Widgets
+    - Media
+    - Captions
+    - Galleries
 # plugins
-	- Jetpack infinite scroll
+    - Jetpack infinite scroll
 # Utilities
-	- Accessibility
-	- Alignments
+    - Accessibility
+    - Alignments
 
 --------------------------------------------------------------*/
 
@@ -199,28 +199,24 @@ label {
     color: #555555;
     font-size: 14px;
     opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
 *::-webkit-input-placeholder {
     color: #555555;
     font-size: 14px;
     opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
 *:-ms-input-placeholder {
     color: #555555;
     font-size: 14px;
     opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
 *::placeholder {
     color: #555555;
     font-size: 14px;
     opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
 .position-relative {
@@ -261,8 +257,39 @@ a:hover {
 img {
     max-width: 100%;
 }
-
-
+.primary-btn {
+    -moz-user-select: none;
+    background: #106001 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 21px;
+    font-weight: 400;
+    margin-bottom: 0;
+    padding: 0 28px;
+    text-align: center;
+    touch-action: manipulation;
+    transition: all 0.3s ease 0s;
+    vertical-align: middle;
+    white-space: nowrap;
+    line-height: 88px;
+}
+.service-readmore-btn a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #14243d;
+    text-transform: uppercase;
+    background: #f3f3f3;
+    height: 40px;
+    border-radius: 50px;
+    line-height: 40px;
+    display: block;
+    text-align: center;
+    display: inline-block;
+    padding: 0 30px;
+}
 /*=========== Header Css=========*/
 #header_area {
   background: #152441;
@@ -272,8 +299,8 @@ img {
   z-index: 999;
 }
 .navbar-brand.logo_h {
-	padding: 32px 0 0 160px;
-	display: block;
+    padding: 32px 0 0 160px;
+    display: block;
 }
 
 #menu-main-menu li {
@@ -322,131 +349,241 @@ img {
     padding: 0;
 }
 .info-box ul li {
-	display: inline-block;
-    margin: 15px 35px;
+    display: inline-block;
+    margin: 10px 35px;
     color: #fff;
     position: relative;
 }
 .info-box ul li::before {
-	position: absolute;
-	content: "";
-	height: 100%;
-	width: 2px;
-	background: #fff;
-	right: -40px;
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 2px;
+    background: #fff;
+    right: -40px;
 }
 .info-box ul li:last-child::before {
     display: none;
 }
 .header-top-bar {
-	background: #106001;
-	align-items: center;
+    background: #106001;
+    align-items: center;
 }
 .info-box ul li a {
-	display: block;
-	margin-left: 10px;
-	color: #fff;
-	font-size: 14px;
-	font-weight: 700;
+    display: block;
+    margin-left: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
 }
 .info-box ul li i {
     color: #fff;
 }
 .social-list a {
-<<<<<<< HEAD
-	background: #1f2e1b;
-	padding: 18px 25px;
-	font-size: 17px;
-	color: #fff;
-=======
-	margin: 0 1px; 
-	padding: 18px 25px;
-	font-size: 17px;
-	color: #fff;
-	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1f2b1d+0,145008+100 */
-background: #1f2b1d; /* Old browsers */
-background: -moz-linear-gradient(top, #1f2b1d 0%, #145008 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, #1f2b1d 0%,#145008 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, #1f2b1d 0%,#145008 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f2b1d', endColorstr='#145008',GradientType=0 ); /* IE6-9 */
->>>>>>> fa99c13477f1191164dfe1bcbcbe404f3e401f14
+    margin: 0 1px;
+    padding: 13px 25px;
+    font-size: 17px;
+    color: #fff;
+    background: #1f2b1d;
+    background: -moz-linear-gradient(top, #1f2b1d 0%, #145008 100%);
+    background: -webkit-linear-gradient(top, #1f2b1d 0%,#145008 100%);
+    background: linear-gradient(to bottom, #1f2b1d 0%,#145008 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f2b1d', endColorstr='#145008',GradientType=0 );
 }
 
 
+/*=========== Section Title Css=========*/
+.section-title {
+    margin-bottom: 70px;
+}
+.section-title h1 {
+    font-size: 70px;
+    color: #14243d;
+    text-transform: capitalize;
+}
 
+.section-title h3 {
+    position: relative;
+    margin-top: 20px;
+    font-size: 22px;
+    color: #142340;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .section-title h3::before, .section-title h3::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    background: #106001;
+    height: 2px;
+    width: 60px;
+  }
+  .section-title h3::before {
+    left: 36%;
+}
+.section-title h3::after {
+    right: 36%;
+}
+/*=========== Services Css=========*/
+.brands-area .container {
+    max-width: 1240px;
+}
+.our-single-service-list {
+    padding: 34px 55px 30px 55px;
+    -webkit-box-shadow: -9px 6px 39px 21px rgba(244,244,244,1);
+    -moz-box-shadow: -9px 6px 39px 21px rgba(244,244,244,1);
+    box-shadow: -9px 6px 39px 21px rgba(244,244,244,1);
+}
+.our-single-service-list::before {
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 100%;
+    background: #115e00;
+    left: 0;
+    top: 0;
+}
+.service-desc-title h3 {
+    font-size: 27px;
+    color: #14243d;
+    padding: 30px 0 15px 0;
+}
+.service-icon img {
+    width: auto;
+    height: 70px;
+}
+  .service-desc-short p {
+    color: #14243d;
+    font-size: 15px;
+}
+
+
+/*=========== Hero Css=========*/
+.hero-area {
+    padding-top: 290px;
+    background: #080e1c;
+}
+.hero-area .container {
+    max-width: 1780px;
+}
+  .hero-area-title h1 {
+    color: #fff;
+    font-size: 78px;
+    line-height: 83px;
+}
+.hero-area-description p {
+    color: #fff;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 33px;
+    padding: 42px 0 80px 0;
+}
+  .site-btn.hero-btn {
+    padding-bottom: 120px;
+}
+.hero-area-thumbnail {
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    right: 0;
+    object-fit: cover;
+}
+
+
+/*=========== Investment Css=========*/
+.investment-phylo-area .container {
+    max-width: 1240px;
+}
+.investment-phylo-area .section-title h3::before {
+    left: 25.5%;
+}
+.investment-phylo-area .section-title h3::after {
+    right: 25.5%;
+}
+.investment-phylo-area .section-title {
+    margin-bottom: 30px;
+}
+.investment-phylo-area {
+    background: #f6f6f6;
+}
+.Philosophy-left-side-description {
+    font-size: 18px;
+    text-align: center;
+    color: #142340;
+    line-height: 28px;
+    margin-bottom: 60px;
+}
+.left-side-Philosophy-wrapper {
+    padding-right: 76px;
+}
+.Philosophy-right-side-small-img {
+    position: absolute;
+    bottom: -45px;
+    border: 15px solid #f6f6f6;
+    left: -85px;
+}
 /*=========== Footer Css=========*/
 .footer-area {
     background: #000b21; 
 }
 .footer-susbcribe-option input[type="email"] {
-	background: #051639;
-	border-radius: 50px;
-	position: relative;
-	padding: 0;
-	height: 60px;
-	padding-left: 40px;
-	font-weight: 700;
-	color: #fff !important;
+    background: #051639;
+    border-radius: 50px;
+    position: relative;
+    padding: 0;
+    height: 60px;
+    padding-left: 40px;
+    font-weight: 700;
+    color: #fff !important;
 }
 .footer-susbcribe-option input[type="submit"] {
-	position: absolute;
-	background: #0f5f00;
-	top: 0;
-<<<<<<< HEAD
-	right: -132%;
-=======
-	right: 0;
->>>>>>> fa99c13477f1191164dfe1bcbcbe404f3e401f14
-	color: #fff;
-	width: 180px;
-	border-radius: 50px;
-	text-transform: uppercase;
-	font-size: 16px;
+    position: absolute;
+    background: #0f5f00;
+    top: 0;
+    color: #fff;
+    width: 180px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 16px;
     font-weight: 700;
     padding: 0;
     height: 60px;
     text-align: center;
 }
 .footer-title {
-	color: #fff;
-	font-size: 24px;
+    color: #fff;
+    font-size: 24px;
 }
 .about-desccription p {
-	color: #aabcd8;
-	font-size: 14px;
+    color: #aabcd8;
+    font-size: 14px;
 }
 .opening-time-detail h4 {
-	font-size: 20px;
-	color: #fff;
-	line-height: 26px;
-	text-transform: capitalize;
-	margin-bottom: 10px;
+    font-size: 20px;
+    color: #fff;
+    line-height: 26px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
 }
 .open-clock img {
-	margin-right: 18px;
+    margin-right: 18px;
 }
 .opening-time-detail ul li {
-	color: #aabcd8;
-	font-size: 14px;
-	font-weight: 700;
-	text-transform: capitalize;
-	font-family: roboto;
-	font-family: 'Roboto', sans-serif;
+    color: #aabcd8;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-family: roboto;
+    font-family: 'Roboto', sans-serif;
 }
 #menu-our-services li a {
-	color: #aabcd8;
-	font-weight: 400;
-	text-transform: capitalize;
-	font-size: 15px;
-	line-height: 40px;
+    color: #aabcd8;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 15px;
+    line-height: 40px;
 }
 .footer-location ul li {
-	color: #aabcd8;
-<<<<<<< HEAD
+    color: #aabcd8;
 }
-=======
-}
-
-/* hero area ccss */
-
->>>>>>> fa99c13477f1191164dfe1bcbcbe404f3e401f14

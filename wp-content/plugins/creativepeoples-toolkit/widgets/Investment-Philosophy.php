@@ -204,7 +204,7 @@ class Investment_Philosophy_Section_Widget extends \Elementor\Widget_Base {
 
 		<div class="container">
 			<div class="row justify-content-lg-between">
-				<div class="col-lg-5">
+				<div class="col-lg-6">
 					<div class="left-side-Philosophy-wrapper">
 						<div class="section-title text-center">
 							<h1><?php echo $section_big_title; ?></h1>

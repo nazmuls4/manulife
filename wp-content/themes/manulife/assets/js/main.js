@@ -76,6 +76,35 @@
                 }
             }
         });
+        // cta area slider
+        $(".decare-servicelist-wrapper").owlCarousel({
+
+            nav: true,
+            dots: false,
+            autoplay: false,
+            margin: 30,
+            loop: true,
+            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+            mouseDrag: true,
+            touchDrag: true,
+            responsive: {
+                1200: {
+                    items: 2
+                },
+                992: {
+                    items: 2
+                },
+                768: {
+                    items: 2
+                },
+                320: {
+                    items: 1
+                },
+                480: {
+                    items: 1
+                }
+            }
+        });
 
 
     });
