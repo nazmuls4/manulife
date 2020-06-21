@@ -18,7 +18,7 @@
 			<div class="row justify-content-lg-between">
 				<div class="col-lg-5">
 					<div class="site-lgo site-footer-logo">
-						 <a class="navbar-brand logo_h" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Site Logo"></a>  
+						 <a class="navbar-brand logo_h" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" class="img-fluid" alt="Site Logo"></a>  
 					</div>
 				</div> 
 				<div class="col-lg-5">
