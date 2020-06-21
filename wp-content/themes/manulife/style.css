@@ -54,17 +54,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Common css
 --------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Adamina&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400&display=swap');
 
 
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: normal;
     font-style: normal;
     font-size: 16px;
-    line-height: 1.62;
-    color: #616583;
+    line-height: 26px;
+    color: #152440;
     background: #ffffff;
 }
  
@@ -92,12 +92,15 @@ a,
 .button {
     -webkit-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
 }
 
 a:focus,
 .button:focus {
     text-decoration: none;
     outline: none;
+
 }
 
 a:focus,
@@ -132,7 +135,9 @@ h6 {
     color :#16182f;
     margin: 0px;
     font-style: normal;
-    font-weight: 700; 
+    font-weight: 400; 
+    font-family: 'Adamina', serif;
+
 }
 
 h1 a,
@@ -151,7 +156,11 @@ ul {
 }
 
 p {
-    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    color: #152440;
+
 }
 
 hr {
@@ -244,8 +253,6 @@ button[type="submit"] {
     text-transform: uppercase;
 }
 
- 
-
 a:focus,
 a:hover {
     text-decoration: none; 
@@ -253,4 +260,170 @@ a:hover {
 
 img {
     max-width: 100%;
+}
+
+
+/*=========== Header Css=========*/
+#header_area {
+  background: #152441;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+.navbar-brand.logo_h {
+	padding: 32px 0 0 160px;
+	display: block;
+}
+
+#menu-main-menu li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  #menu-main-menu li a {
+    padding: 35px;
+    position: relative;
+    font-size: 16px;
+    color: #122641;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+  }
+  #menu-main-menu li:first-child {
+      margin-left: 0;
+  }
+  #menu-main-menu li:last-child {
+    margin-right: 0;
+}
+  .main_menu {
+    background: #fff;
+  }
+  #menu-main-menu li a:before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 100%;
+    background: #106001;
+    bottom: 0;
+    left: 0;
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  #menu-main-menu li a:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+#menu-main-menu li a:hover {
+    background-color: #f4f9ff;
+}
+.navbar.navbar-expand-xl {
+    padding: 0;
+}
+.info-box ul li {
+	display: inline-block;
+    margin: 15px 35px;
+    color: #fff;
+    position: relative;
+}
+.info-box ul li::before {
+	position: absolute;
+	content: "";
+	height: 100%;
+	width: 2px;
+	background: #fff;
+	right: -40px;
+}
+.info-box ul li:last-child::before {
+    display: none;
+}
+.header-top-bar {
+	background: #106001;
+	align-items: center;
+}
+.info-box ul li a {
+	display: block;
+	margin-left: 10px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 700;
+}
+.info-box ul li i {
+    color: #fff;
+}
+.social-list a {
+	background: #1f2e1b;
+	padding: 18px 25px;
+	font-size: 17px;
+	color: #fff;
+}
+
+
+
+/*=========== Footer Css=========*/
+.footer-area {
+    background: #000b21;
+    margin-top: 300px;
+}
+.footer-susbcribe-option input[type="email"] {
+	background: #051639;
+	border-radius: 50px;
+	position: relative;
+	padding: 0;
+	height: 60px;
+	padding-left: 40px;
+	font-weight: 700;
+	color: #fff !important;
+}
+.footer-susbcribe-option input[type="submit"] {
+	position: absolute;
+	background: #0f5f00;
+	top: 0;
+	right: -132%;
+	color: #fff;
+	width: 180px;
+	border-radius: 50px;
+	text-transform: uppercase;
+	font-size: 16px;
+    font-weight: 700;
+    padding: 0;
+    height: 60px;
+    text-align: center;
+}
+.footer-title {
+	color: #fff;
+	font-size: 24px;
+}
+.about-desccription p {
+	color: #aabcd8;
+	font-size: 14px;
+}
+.opening-time-detail h4 {
+	font-size: 20px;
+	color: #fff;
+	line-height: 26px;
+	text-transform: capitalize;
+	margin-bottom: 10px;
+}
+.open-clock img {
+	margin-right: 18px;
+}
+.opening-time-detail ul li {
+	color: #aabcd8;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: capitalize;
+	font-family: roboto;
+	font-family: 'Roboto', sans-serif;
+}
+#menu-our-services li a {
+	color: #aabcd8;
+	font-weight: 400;
+	text-transform: capitalize;
+	font-size: 15px;
+	line-height: 40px;
+}
+.footer-location ul li {
+	color: #aabcd8;
 }
