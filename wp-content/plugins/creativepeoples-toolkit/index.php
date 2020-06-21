@@ -237,9 +237,13 @@ final class Cp_Toolkit_Extenstion {
 
 		// Include Widget files
 		require_once( __DIR__ . '/widgets/hero-area.php');  
+		require_once( __DIR__ . '/widgets/service.php');  
+		require_once( __DIR__ . '/widgets/Investment-Philosophy.php');  
 
 		// Register widget
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Hero_Area_Widget() );  
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \service_Section_Widget() );  
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Investment_Philosophy_Section_Widget() );  
 
 	}
 
