@@ -369,8 +369,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f2b1d', end
 
 /*=========== Footer Css=========*/
 .footer-area {
-    background: #000b21;
-    margin-top: 300px;
+    background: #000b21; 
 }
 .footer-susbcribe-option input[type="email"] {
 	background: #051639;
