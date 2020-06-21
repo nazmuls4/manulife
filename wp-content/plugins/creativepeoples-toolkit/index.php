@@ -236,24 +236,16 @@ final class Cp_Toolkit_Extenstion {
 	public function init_widgets() {
 
 		// Include Widget files
-		require_once( __DIR__ . '/widgets/hero-area.php'); 
-		require_once( __DIR__ . '/widgets/works.php'); 
-		require_once( __DIR__ . '/widgets/lenders.php'); 
-		require_once( __DIR__ . '/widgets/home-easey.php'); 
-		require_once( __DIR__ . '/widgets/why-we-area.php'); 
-		require_once( __DIR__ . '/widgets/we-cover.php'); 
-		require_once( __DIR__ . '/widgets/would-like.php'); 
-		require_once( __DIR__ . '/widgets/process.php'); 
+		require_once( __DIR__ . '/widgets/hero-area.php');  
+		require_once( __DIR__ . '/widgets/service.php');  
+		require_once( __DIR__ . '/widgets/Investment-Philosophy.php');  
+		require_once( __DIR__ . '/widgets/how-much.php');  
 
 		// Register widget
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Hero_Area_Widget() ); 
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \works_section_Widget() ); 
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \lenders_section_Widget() ); 
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \home_easy_section_Widget() ); 
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \wehy_we_are_section_Widget() ); 
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \we_cover_section_Widget() ); 
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \would_like_section_Widget() ); 
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \process_section_Widget() ); 
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Hero_Area_Widget() );  
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \service_Section_Widget() );  
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Investment_Philosophy_Section_Widget() );  
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \how_much_Section_Widget() );  
 
 	}
 
